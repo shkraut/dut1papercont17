@@ -107,53 +107,16 @@ dUT1.
 The term UT1-UTC represents the corrections to the phase of the Earth rotation angle $\Omega$ UT1 ($\Omega$ is the nominal Earth angular velocity). Very long baseline interferometry is the only space geodetic technique which is can determine UT1-UTC. It is a microwave-based space geodetic technique that measures the difference in signal arrival times from the extragalactic radio source (e.g., the Quasars) receiving simultaneously at two or more radio telescopes. As GNSS satellites require UT1-UTC daily as an important input, this quantity has to be determined fairly on a daily basis. \\
 The International VLBI Service for Geodesy and Astrometry (IVS) established so-called Intensive sessions, which are being carried out since 1985. The primary objective of intensive sessions is to determine UT1-UTC, and it consists of one VLBI baseline, and it typically spans over for one hour. The baselines consist of a large east-west extension as UT1 is highly sensitive to it. The stations which take part in the intensive sessions are mentioned in the table. The accuracy of UT1 estimates obtained from intensive sessions is about 15 microseconds, whereas the accuracy of UT1 estimates from 24-hour VLBI sessions is about 6-7 microseconds. The parameterization used for the analysis of intensive sessions are different from the parameterization of 24-hour sessions and can be seen in the table. As seen from the table, we do not estimate most of the parameters while analyzing intensive sessions, because the intensive sessions do not contain enough observations per parameter. Besides, the station coordinates cannot be estimated as one baseline is insufficient to fix the degree of freedom of the terrestrial basis. The dUT1, which is estimated from this approach, may contain inaccuracies. As intensive sessions contain observations for one hour, they give rise to correlations between CPO and terrestrial pole coordinates. Whereas analyzing 24-hour VLBI sessions, the parameters which were fixed to their respective apriori values in the approach mentioned above, are estimated in this approach. This is possible as the 24-hour sessions contain multiple baselines and enough observations per parameter. \\
 This can be validated by comparing dUT1 values derived from intensive sessions and 24-hour VLBI sessions. Generally, the 24-hour and intensive sessions coincide only 2-3 days a week, but during continuous VLBI campaign CONT-17, the 24-hour and intensive sessions take place on the same day for 15 days. This provides an excellent opportunity to compare dUT1 values from these sessions. During this campaign, two kinds of 24-hour sessions and three types of the intensive session took place. We will discuss it's detailed in the next section.
-\section{Section title}
+\section{CONT17 campaign}
 \label{sec:1}
-Text with citations \cite{RefB} and \cite{RefJ}.
-\subsection{Subsection title}
-\label{sec:2}
-as required. Don't forget to give each section
-and subsection a unique label (see Sect.~\ref{sec:1}).
-\paragraph{Paragraph headings} Use paragraph headings as needed.
-\begin{equation}
-a^2+b^2=c^2
-\end{equation}
-
-% For one-column wide figures use
 \begin{figure}
-% Use the relevant command to insert your figure file.
-% For example, with the graphicx package use
-  \includegraphics{example.eps}
-% figure caption is below the figure
-\caption{Please write your figure caption here}
-\label{fig:1}       % Give a unique label
+    \centering
+    \includegraphics[scale=0.25]{VLBI_station_c.eps}
+    \caption{Geographical representation of the stations of the various network. Legacy (S/X) stationsin VLBA network (marked as the red triangle), IVS network (marked as the blue triangle); VGOSstations are represented by a Green circle; stations which participate in intensives are indicated bya black cross and their baselines are represented by a black solid line. \citep{rauteffect}}
+    \label{fig:cont17stations}
 \end{figure}
-%
-% For two-column wide figures use
-\begin{figure*}
-% Use the relevant command to insert your figure file.
-% For example, with the graphicx package use
-  \includegraphics[width=0.75\textwidth]{example.eps}
-% figure caption is below the figure
-\caption{Please write your figure caption here}
-\label{fig:2}       % Give a unique label
-\end{figure*}
-%
-% For tables use
-\begin{table}
-% table caption is above the table
-\caption{Please write your table caption here}
-\label{tab:1}       % Give a unique label
-% For LaTeX tables use
-\begin{tabular}{lll}
-\hline\noalign{\smallskip}
-first & second & third  \\
-\noalign{\smallskip}\hline\noalign{\smallskip}
-number & number & number \\
-number & number & number \\
-\noalign{\smallskip}\hline
-\end{tabular}
-\end{table}
+
+
 
 
 %\begin{acknowledgements}
@@ -162,25 +125,26 @@ number & number & number \\
 %\end{acknowledgements}
 
 % BibTeX users please use one of
-%\bibliographystyle{spbasic}      % basic style, author-year citations
-%\bibliographystyle{spmpsci}      % mathematics and physical sciences
-%\bibliographystyle{spphys}       % APS-like style for physics
-%\bibliography{}   % name your BibTeX data base
+% \bibliographystyle{spbasic}      % basic style, author-year citations
+% %\bibliographystyle{spmpsci}      % mathematics and physical sciences
+% %\bibliographystyle{spphys}       % APS-like style for physics
+% %\bibliography{}   % name your BibTeX data base
 
-% Non-BibTeX users please use
-\begin{thebibliography}{}
-%
-% and use \bibitem to create references. Consult the Instructions
-% for authors for reference list style.
-%
-\bibitem{RefJ}
-% Format for Journal Reference
-Author, Article title, Journal, Volume, page numbers (year)
-% Format for books
-\bibitem{RefB}
-Author, Book title, page numbers. Publisher, place (year)
-% etc
-\end{thebibliography}
-
+% % Non-BibTeX users please use
+% \begin{thebibliography}{}
+% %
+% % and use \bibitem to create references. Consult the Instructions
+% % for authors for reference list style.
+% %
+% \bibitem{RefJ}
+% % Format for Journal Reference
+% Author, Article title, Journal, Volume, page numbers (year)
+% % Format for books
+% \bibitem{RefB}
+% Author, Book title, page numbers. Publisher, place (year)
+% % etc
+% \end{thebibliography}
+\bibliography{reference}
+\bibliographystyle{spbasic}
 \end{document}
 % end of file template.tex
