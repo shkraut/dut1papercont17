@@ -104,31 +104,9 @@ dUT1.
 
 \section{Introduction}
 \label{intro}
-Very long baseline interferometry (VLBI) is a microwave-based space geodetic technique that measures the difference in arrival time of signals from extra-galactic radio source (e.g., the Quasars) received simultaneously at two or more radio telescopes. VLBI is one of the high precision space geodetic techniques which can provide the full set of the Earth orientation parameters (EOP). The EOP represent the link between the Terrestrial reference frame (TRF) and the Celestial reference frame (CRF). The EOP consist of five angles, namely xp and yp the pole coordinates describing the polar motion, UT1−UTC correcting the phase of the rotation angle UT1 (is the nominal
-Earth angular velocity), and celestial pole offsets (CPO) (dX,dY).
-The International VLBI Service for Geodesy and Astrometry (IVS) normally conducts two types of
-VLBI network sessions, 24-hour sessions, which are carried out about three days per week, and the
-hour-long one-baseline intensives which are carried out daily. The intensives are used to determine
-UT1-UTC on a daily basis, whereas the 24-hour sessions give the complete set of EOP several
-times per week. The so-called dUT1 value is determined from the one-hour intensive VLBI daily
-session carried out on one baseline. During the analysis of intensive session, parameters like dUT1,
-single clock offset, and zenith wet delay are estimated whereas other parameters such as polar motion
-(PM), celestial pole offsets (CPO), station and source coordinates and tropospheric gradients
-are fixed to their a priori values respectively. Such kind of parameterization is chosen as there are not enough observations per parameter. Besides, the station coordinates cannot be estimated as
-one baseline is insufficient to fix the degree of freedom of the terrestrial basis. As intensive sessions
-contain observations during one hour, they give rise to correlations between CPO and terrestrial
-pole coordinates. The dUT1, which is estimated from this approach, may contain inaccuracies.
-Whereas analyzing 24-hour VLBI sessions, the parameters which were fixed to their respective a
-priori values in the approach mentioned above, are estimated in this approach. This is possible as
-the 24-hour sessions contain multiple baselines and enough observations per parameter.
-This can be validated by comparing dUT1 values derived from intensive sessions and 24-hour VLBI
-sessions considering their different observation intervals through sub-daily parameterization. This
-gives an idea of how different parameterization can affect dUT1 determination. For this work, we
-chose the continuous VLBI campaign CONT17. Such campaign, that take place every three years
-intend to have continuous VLBI observations over two weeks. The CONT17 campaign differed from
-the previous ones, as the observations were carried out by three independent networks: two legacy
-networks observed at S/X band, one VGOS network performed broadband observing. During these
-15 days, 24-hour sessions took place daily, along with two intensive sessions.
+The term UT1-UTC represents the corrections to the phase of the Earth rotation angle $\Omega$ UT1 ($\Omega$ is the nominal Earth angular velocity). Very long baseline interferometry is the only space geodetic technique which is can determine UT1-UTC. It is a microwave-based space geodetic technique that measures the difference in signal arrival times from the extragalactic radio source (e.g., the Quasars) receiving simultaneously at two or more radio telescopes. As GNSS satellites require UT1-UTC daily as an important input, this quantity has to be determined fairly on a daily basis. \\
+The International VLBI Service for Geodesy and Astrometry (IVS) established so-called Intensive sessions, which are being carried out since 1985. The primary objective of intensive sessions is to determine UT1-UTC, and it consists of one VLBI baseline, and it typically spans over for one hour. The baselines consist of a large east-west extension as UT1 is highly sensitive to it. The stations which take part in the intensive sessions are mentioned in the table. The accuracy of UT1 estimates obtained from intensive sessions is about 15 microseconds, whereas the accuracy of UT1 estimates from 24-hour VLBI sessions is about 6-7 microseconds. The parameterization used for the analysis of intensive sessions are different from the parameterization of 24-hour sessions and can be seen in the table. As seen from the table, we do not estimate most of the parameters while analyzing intensive sessions, because the intensive sessions do not contain enough observations per parameter. Besides, the station coordinates cannot be estimated as one baseline is insufficient to fix the degree of freedom of the terrestrial basis. The dUT1, which is estimated from this approach, may contain inaccuracies. As intensive sessions contain observations for one hour, they give rise to correlations between CPO and terrestrial pole coordinates. Whereas analyzing 24-hour VLBI sessions, the parameters which were fixed to their respective apriori values in the approach mentioned above, are estimated in this approach. This is possible as the 24-hour sessions contain multiple baselines and enough observations per parameter. \\
+This can be validated by comparing dUT1 values derived from intensive sessions and 24-hour VLBI sessions. Generally, the 24-hour and intensive sessions coincide only 2-3 days a week, but during continuous VLBI campaign CONT-17, the 24-hour and intensive sessions take place on the same day for 15 days. This provides an excellent opportunity to compare dUT1 values from these sessions. During this campaign, two kinds of 24-hour sessions and three types of the intensive session took place. We will discuss it's detailed in the next section.
 \section{Section title}
 \label{sec:1}
 Text with citations \cite{RefB} and \cite{RefJ}.
