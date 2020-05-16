@@ -1,0 +1,208 @@
+% This is a general template file for the LaTeX package SVJour3
+% for Springer journals. Original by Springer Heidelberg, 2010/09/16
+%
+% Use it as the basis for your article. Delete % signs as needed.
+%
+% This template includes a few options for different layouts and
+% content for various journals. Please consult a previous issue of
+% your journal as needed.
+%
+\RequirePackage{fix-cm}
+%
+%\documentclass{svjour3}                     % onecolumn (standard format)
+%\documentclass[smallcondensed]{svjour3}     % onecolumn (ditto)
+\documentclass[smallextended]{svjour3}       % onecolumn (second format)
+%\documentclass[twocolumn]{svjour3}          % twocolumn
+%
+\smartqed  % flush right qed marks, e.g. at end of proof
+%
+\usepackage{graphicx}
+\usepackage{authblk}
+%
+% insert here the call for the packages your document requires
+%\usepackage{mathptmx}      % use Times fonts if available on your TeX system
+%\usepackage{latexsym}
+% etc.
+\usepackage{mathptmx}      % use Times fonts if available on your TeX system
+\usepackage{latexsym}% 
+\usepackage{lineno}% 
+\usepackage{amsmath}%
+\usepackage{upgreek} % 
+\usepackage{mathtools} % 
+\usepackage{graphicx}% 
+%\usepackage{subcaption}
+\usepackage{tikz}% <<<<<<<<<<<< Added by Sadegh
+%\linenumbers*[1]% <<<<<<<<<<<< Added by Sadegh
+\usepackage{makecell}% <<<<<<<<<<<< Added by Sadegh
+\usepackage{natbib}% <<<<<<<<<<<< Added by Sadegh
+\usepackage{geometry}% <<<<<<<<<<<< Added by Sadegh
+\usepackage{float}
+\usepackage{subfigure}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage{multicol, blindtext}
+\floatstyle{plaintop}
+\restylefloat{table}
+% please place your own definitions here and don't use \def but
+% \newcommand{}{}
+%
+% Insert the name of "your journal" with
+% \journalname{myjournal}
+%
+\begin{document}
+
+\title{Evaluation of UT1 from intensives and 24-hour sessions from CONT17 campaign
+%\thanks{}
+}
+% Grants or other notes about the article that should go on the front
+% page should be placed within the \thanks{} command in the title
+% (and the %-sign in front of \thanks{} should be deleted)
+%
+% General acknowledgments should be placed at the end of the article.
+
+% \subtitle{Do you have a subtitle?\\ If so, write it here}
+
+%\titlerunning{Short form of title}        % if too long for running head
+
+\author{Shrishail Raut\textsuperscript{1,2}       \and
+        Robert Heinkelmann\textsuperscript{1}     \and
+        Sadegh Modiri\textsuperscript{1,2}           \and
+        Kyriakos Balidakis\textsuperscript{1}          \and
+         Santiago Belda\textsuperscript{3,4}                \and
+         Harald Schuh\textsuperscript{1,2}
+}
+
+\authorrunning{Shrishail Raut et al}
+\institute{Shrishail Subhash Raut \and Robert Heinkelmann \and Sadegh Modiri \and Kyriakos Balidakis \and Harald Schuh \at
+             GFZ German Research Centre for Geosciences, Potsdam, Germany \\
+             Technische Universit{\"a}t Berlin, Institute for Geodesy and Geoinformation Science, Berlin, Germany
+           \and
+          Santiago Belda \at
+             Image Processing Laboratory (IPL) - Laboratory of Earth Observation (LEO), University of Valencia, Valencia, Spain
+             \\
+             UAVAC, University of Alicante, Alicante, Spain
+              \and
+              \textsuperscript{1} GFZ German Research Centre for Geosciences, Potsdam, Germany  \\
+              \textsuperscript{2} Technische Universit{\"a}t Berlin, Institute for Geodesy and Geoinformation Science, Berlin, Germany \\ 
+              \textsuperscript{3} Image Processing Laboratory (IPL) - Laboratory of Earth Observation (LEO), University of Valencia, Valencia, Spain\\
+              \textsuperscript{4}  UAVAC, University of Alicante, Alicante, Spain
+}
+
+\date{Received: date / Accepted: date}
+% The correct dates will be entered by the editor
+
+\maketitle
+
+\begin{abstract}
+This work deals with validating the established approach of analyzing VLBI intensive sessions to determine dUT1. VLBI sessions from the CONT17 campaign are chosen as they provide continuous VLBI observations over two weeks (28th Nov - 12th Dec 2017) of the currently highest quality. For the standard 24-hour sessions in this campaign, two different legacy networks were involved, the legacy-1 network, which was entirely based on IVS network stations with global distribution, and legacy-2 network involving VLBA and a few IVS network stations for the global extension. In addition to these 24-hour sessions, two different IVS and one Russian intensive sessions were observed every day during CONT17. The dUT1 determined from the intensive sessions are compared with daily and hourly dUT1 from 24-hour sessions during this 15-day time-frame. The results show that the dUT1 determined from intensive sessions do not show good agreement with daily dUT1 from 24-hour sessions; however, it shows better agreement with hourly
+dUT1.
+\keywords{UT1 \and VLBI \and CONT17}
+% \PACS{PACS code1 \and PACS code2 \and more}
+% \subclass{MSC code1 \and MSC code2 \and more}
+\end{abstract}
+
+\section{Introduction}
+\label{intro}
+Very long baseline interferometry (VLBI) is a microwave-based space geodetic technique that measures the difference in arrival time of signals from extra-galactic radio source (e.g., the Quasars) received simultaneously at two or more radio telescopes. VLBI is one of the high precision space geodetic techniques which can provide the full set of the Earth orientation parameters (EOP). The EOP represent the link between the Terrestrial reference frame (TRF) and the Celestial reference frame (CRF). The EOP consist of five angles, namely xp and yp the pole coordinates describing the polar motion, UT1−UTC correcting the phase of the rotation angle UT1 (is the nominal
+Earth angular velocity), and celestial pole offsets (CPO) (dX,dY).
+The International VLBI Service for Geodesy and Astrometry (IVS) normally conducts two types of
+VLBI network sessions, 24-hour sessions, which are carried out about three days per week, and the
+hour-long one-baseline intensives which are carried out daily. The intensives are used to determine
+UT1-UTC on a daily basis, whereas the 24-hour sessions give the complete set of EOP several
+times per week. The so-called dUT1 value is determined from the one-hour intensive VLBI daily
+session carried out on one baseline. During the analysis of intensive session, parameters like dUT1,
+single clock offset, and zenith wet delay are estimated whereas other parameters such as polar motion
+(PM), celestial pole offsets (CPO), station and source coordinates and tropospheric gradients
+are fixed to their a priori values respectively. Such kind of parameterization is chosen as there are not enough observations per parameter. Besides, the station coordinates cannot be estimated as
+one baseline is insufficient to fix the degree of freedom of the terrestrial basis. As intensive sessions
+contain observations during one hour, they give rise to correlations between CPO and terrestrial
+pole coordinates. The dUT1, which is estimated from this approach, may contain inaccuracies.
+Whereas analyzing 24-hour VLBI sessions, the parameters which were fixed to their respective a
+priori values in the approach mentioned above, are estimated in this approach. This is possible as
+the 24-hour sessions contain multiple baselines and enough observations per parameter.
+This can be validated by comparing dUT1 values derived from intensive sessions and 24-hour VLBI
+sessions considering their different observation intervals through sub-daily parameterization. This
+gives an idea of how different parameterization can affect dUT1 determination. For this work, we
+chose the continuous VLBI campaign CONT17. Such campaign, that take place every three years
+intend to have continuous VLBI observations over two weeks. The CONT17 campaign differed from
+the previous ones, as the observations were carried out by three independent networks: two legacy
+networks observed at S/X band, one VGOS network performed broadband observing. During these
+15 days, 24-hour sessions took place daily, along with two intensive sessions.
+\section{Section title}
+\label{sec:1}
+Text with citations \cite{RefB} and \cite{RefJ}.
+\subsection{Subsection title}
+\label{sec:2}
+as required. Don't forget to give each section
+and subsection a unique label (see Sect.~\ref{sec:1}).
+\paragraph{Paragraph headings} Use paragraph headings as needed.
+\begin{equation}
+a^2+b^2=c^2
+\end{equation}
+
+% For one-column wide figures use
+\begin{figure}
+% Use the relevant command to insert your figure file.
+% For example, with the graphicx package use
+  \includegraphics{example.eps}
+% figure caption is below the figure
+\caption{Please write your figure caption here}
+\label{fig:1}       % Give a unique label
+\end{figure}
+%
+% For two-column wide figures use
+\begin{figure*}
+% Use the relevant command to insert your figure file.
+% For example, with the graphicx package use
+  \includegraphics[width=0.75\textwidth]{example.eps}
+% figure caption is below the figure
+\caption{Please write your figure caption here}
+\label{fig:2}       % Give a unique label
+\end{figure*}
+%
+% For tables use
+\begin{table}
+% table caption is above the table
+\caption{Please write your table caption here}
+\label{tab:1}       % Give a unique label
+% For LaTeX tables use
+\begin{tabular}{lll}
+\hline\noalign{\smallskip}
+first & second & third  \\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+number & number & number \\
+number & number & number \\
+\noalign{\smallskip}\hline
+\end{tabular}
+\end{table}
+
+
+%\begin{acknowledgements}
+%If you'd like to thank anyone, place your comments here
+%and remove the percent signs.
+%\end{acknowledgements}
+
+% BibTeX users please use one of
+%\bibliographystyle{spbasic}      % basic style, author-year citations
+%\bibliographystyle{spmpsci}      % mathematics and physical sciences
+%\bibliographystyle{spphys}       % APS-like style for physics
+%\bibliography{}   % name your BibTeX data base
+
+% Non-BibTeX users please use
+\begin{thebibliography}{}
+%
+% and use \bibitem to create references. Consult the Instructions
+% for authors for reference list style.
+%
+\bibitem{RefJ}
+% Format for Journal Reference
+Author, Article title, Journal, Volume, page numbers (year)
+% Format for books
+\bibitem{RefB}
+Author, Book title, page numbers. Publisher, place (year)
+% etc
+\end{thebibliography}
+
+\end{document}
+% end of file template.tex
