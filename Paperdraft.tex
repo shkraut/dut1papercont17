@@ -102,23 +102,106 @@ dUT1.
 % \subclass{MSC code1 \and MSC code2 \and more}
 \end{abstract}
 
-\section{Introduction}
+\section{INTRODUCTION}
 \label{intro}
-The term UT1-UTC represents the corrections to the phase of the Earth rotation angle $\Omega$ UT1 ($\Omega$ is the nominal Earth angular velocity). Very long baseline interferometry is the only space geodetic technique which is can determine UT1-UTC. It is a microwave-based space geodetic technique that measures the difference in signal arrival times from the extragalactic radio source (e.g., the Quasars) receiving simultaneously at two or more radio telescopes. As GNSS satellites require UT1-UTC daily as an important input, this quantity has to be determined fairly on a daily basis. \\
-The International VLBI Service for Geodesy and Astrometry (IVS) established so-called Intensive sessions, which are being carried out since 1985. The primary objective of intensive sessions is to determine UT1-UTC, and it consists of one VLBI baseline, and it typically spans over for one hour. The baselines consist of a large east-west extension as UT1 is highly sensitive to it. The stations which take part in the intensive sessions are mentioned in the table. The accuracy of UT1 estimates obtained from intensive sessions is about 15 microseconds, whereas the accuracy of UT1 estimates from 24-hour VLBI sessions is about 6-7 microseconds. The parameterization used for the analysis of intensive sessions are different from the parameterization of 24-hour sessions and can be seen in the table. As seen from the table, we do not estimate most of the parameters while analyzing intensive sessions, because the intensive sessions do not contain enough observations per parameter. Besides, the station coordinates cannot be estimated as one baseline is insufficient to fix the degree of freedom of the terrestrial basis. The dUT1, which is estimated from this approach, may contain inaccuracies. As intensive sessions contain observations for one hour, they give rise to correlations between CPO and terrestrial pole coordinates. Whereas analyzing 24-hour VLBI sessions, the parameters which were fixed to their respective apriori values in the approach mentioned above, are estimated in this approach. This is possible as the 24-hour sessions contain multiple baselines and enough observations per parameter. \\
-This can be validated by comparing dUT1 values derived from intensive sessions and 24-hour VLBI sessions. Generally, the 24-hour and intensive sessions coincide only 2-3 days a week, but during continuous VLBI campaign CONT-17, the 24-hour and intensive sessions take place on the same day for 15 days. This provides an excellent opportunity to compare dUT1 values from these sessions. During this campaign, two kinds of 24-hour sessions and three types of the intensive session took place. We will discuss it's detailed in the next section.
-\section{CONT17 campaign}
-\label{sec:1}
+The term UT1-UTC represents the corrections to the phase of the Earth rotation angle $\Omega$ UT1 ($\Omega$ is the nominal Earth angular velocity). Very long baseline interferometry is the only space geodetic technique which is can determine UT1-UTC. It is a microwave-based space geodetic technique that measures the difference in signal arrival times from the extra-galactic radio source (e.g., the Quasars) receiving simultaneously at two or more radio telescopes. As GNSS satellites require UT1-UTC daily as an important input, this quantity has to be determined daily. \\
+The International VLBI Service for Geodesy and Astrometry (IVS) established so-called Intensive sessions, which are being carried out since 1985. The primary objective of intensive sessions is to determine UT1-UTC, and it consists of one VLBI baseline, and it typically spans over for one hour. The baselines consist of a large east-west extension as UT1 is highly sensitive to it. The stations which take part in the intensive sessions are mentioned in the table. The accuracy of UT1 estimates obtained from intensive sessions is about 15 microseconds, whereas the accuracy of UT1 estimates from 24-hour VLBI sessions is about 6-7 microseconds. The parameterization used for the analysis of intensive sessions are different from the parameterization of 24-hour sessions and can be seen in the table. As seen from the table~\ref{tab:param}, we do not estimate most of the parameters while analyzing intensive sessions, because the intensive sessions do not contain enough observations per parameter. Besides, the station coordinates cannot be estimated as one baseline is insufficient to fix the degree of freedom of the terrestrial basis. The dUT1, which is estimated from this approach, may contain inaccuracies. As intensive sessions contain observations for one hour, they give rise to correlations between CPO and terrestrial pole coordinates. Whereas analyzing 24-hour VLBI sessions, the parameters which were fixed to their respective apriori values in the parameterization mentioned above, are estimated in this analysis. This is possible as the 24-hour sessions contain multiple baselines and enough observations per parameter. \\
+This can be validated by comparing dUT1 values derived from intensive sessions and 24-hour VLBI sessions. Generally, the 24-hour and intensive sessions coincide only 2-3 days a week, but during continuous VLBI campaign CONT-17, the 24-hour and intensive sessions take place on the same day for 15 days. This provides an excellent opportunity to compare dUT1 values from these sessions. During this campaign, two kinds of 24-hour sessions and three types of the intensive session took place. We will discuss it's detailed in the next section. Further, the dUT1 values from the intensives can be compared with dUT1 values derived from the High-Frequency EOP model such as Gipson, IERS HFEOP model, Desai. The Length-of-day (LOD) computed from dUT1 can also be compared with LOD estimated from GNSS. 
+\section{CONT17 CAMPAIGN}
+The CONT17 campaign officially started on 28th November 2017 at 00:00:00 UT, and it ended on 12th December 2017 at 23:59:59 UT. The geographical locations of the participating stations along with baselines of the intensives sessions can be seen in figure~\ref{fig:cont17stations}. The number of observations that took place in legacy networks and different intensive sessions can be illustrated in figure~\ref{fig:noofobs}. We can say from the figure~\ref{fig:noofobs}  that the average number of observations in legacy networks is more than a factor of 1000 as compared with the intensive sessions. The details of the different intensive sessions are compiled in the table~\ref{tab:int}.
+
+\begin{table}[]
+\centering
+\caption{Overview of Intensives during CONT17.}
+\label{tab:int}
+\begin{tabular}{cccc}
+\hline
+ & \textbf{IVS-INT1} & \textbf{IVS-INT2} & \textbf{Ru1} \\ \Xhline{1pt}
+\textbf{Stations} & \begin{tabular}[c]{@{}l@{}}Wettzell (Germany)\\ Kokee Park (USA)\end{tabular} & \begin{tabular}[c]{@{}l@{}}Wettzell (Germany)\\ Kokee Park (USA\end{tabular} & \begin{tabular}[c]{@{}l@{}}Badary (Russia) \\ \\ Zelenchk (Russia)\end{tabular} \\ \hline
+\textbf{Length of baseline (km)} & 10,357.4 & 10,357.4 & 4,405 \\
+\textbf{East-West dimension (km)} & 10,072 & 10,072 &  \\
+\textbf{North-South dimension (km)} & 2,414 & 2,414 &  \\
+\textbf{Observing days} & \begin{tabular}[c]{@{}l@{}}28th Nov - 1st Dec,\\ 4th - 8th Dec,\\ 11th -12th Dec\end{tabular} & \begin{tabular}[c]{@{}l@{}}2nd, 3rd, 9th, \\ \\ 10th Dec\end{tabular} & 28th Nov - 12th Dec \\
+\textbf{Time frame of observations} & 19:00 - 20:00 & 08:30 - 09:30 & 18:30 - 19:30 \\ \hline
+\end{tabular}
+\end{table}
+
 \begin{figure}
     \centering
-    \includegraphics[scale=0.25]{VLBI_station_c.eps}
-    \caption{Geographical representation of the stations of the various network. Legacy (S/X) stationsin VLBA network (marked as the red triangle), IVS network (marked as the blue triangle); VGOSstations are represented by a Green circle; stations which participate in intensives are indicated bya black cross and their baselines are represented by a black solid line. \citep{rauteffect}}
+    \includegraphics[scale=0.31]{VLBI_station_c.eps}
+    \caption{Geographical representation of the stations of the various network. Legacy (S/X) stations in VLBA network (marked as the red triangle), IVS network (marked as the blue triangle); VGOS stations are represented by a Green circle; stations which participate in intensives are indicated by a black cross and their baselines are represented by a black solid line. \citep{rauteffect}}
     \label{fig:cont17stations}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.3]{noofobslog.eps}
+    \caption{Number of VLBI observation during CONT17 campaign (observations from VGOS are not included). (\textit{y-axis has logarithmic scale})}
+    \label{fig:noofobs}
 \end{figure}
 
 
+\section{METHODOLOGY}
+The dUT1 from CONT17 data was estimated with VieVs@GFZ(\citep{nilsson2015application}. For our analysis, the models and the apriori used are shown in the table~\ref{tab:models}. At first, the dUT1 estimated from legacy-1, legacy-2 and combined legacy networks were compared. The dUT1 was estimated for one day and 1-hour temporal resolutions. Here the standard parameterization for a 24-hour session was used (see table~\ref{tab:param}. \\
+Secondly, dUT1 from intensives are estimated, where the standard parameterization for Intensives were followed (see table~\ref{tab:param}). These estimated dUT1 values are compared with dUT1 values estimated from the legacy networks.
+\begin{table}[]
+\centering
+\caption{A priori and correction models used for different parameters}
+\label{tab:models}
+\begin{tabular}{ccc}
+\hline
+\multicolumn{2}{c}{\textbf{Parameters}} & \textbf{Models/ Frames} \\ \Xhline{1pt}
+\multirow{\textbf{Reference frames}} & Terrestial reference frame & ITRF2014 \\
+ & Celestial reference frame & ICRF3 \\
+\textbf{Ephimerides} & Ephimerides & JPL 421 \\
+\multirow{\textbf{Troposphere}} & Pressure & GPT2 \\
+ & Temperature & GPT2 \\
+ & Mapping functions & Potsdam mapping function (PMF) \\
+ & Gradients & APG (Bohm) \\
+\textbf{Ionosphere} & Ionosphere delay & From NGS \\
+\multirow{\textbf{Station models}} & Tidal Ocean loading & FES2004 \\
+ & Tidal Atmosphere loading & vandam \\
+ & Mean pole model & IERS 2015 \\
+\multirow{\textbf{EOP}} & A priori time series & finals (Bulletin A) \\
+ & Precession/Nutation model & IAU 2006/200A \\ \hline
+\end{tabular}
+\end{table}
 
+\begin{table}[]
+\caption{Standard parameterization used for analysing intensive and 24-hour VLBI sessions (*high relative constraint)}
+\label{tab:param}
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\multicolumn{2}{|c|}{\multirow{\textbf{Parameters}}} & \multicolumn{2}{c|}{\textbf{LSM parameterization}} \\ \cline{3-4} 
+\multicolumn{2}{|c|}{} & \textbf{Intensives} & \textbf{24-hour} \\ \hline
+\multirow{\textbf{\begin{tabular}[c]{@{}c@{}}Troposphere \\ \\ Estimation\end{tabular}}} & Zenith wet delays & Estimated & Estimated \\ \cline{2-4} 
+ & North gradients & Not Estimated & Estimated \\ \cline{2-4} 
+ & East gradients & Not Estimated & Estimated \\ \hline
+\textbf{Clock Estimation} &  & Estimated & Estimated \\ \hline
+\multirow{\textbf{EOP}} & x-pole & Not Estimated & Estimated \\ \cline{2-4} 
+ & y-pole & Not Estimated & Estimated \\ \cline{2-4} 
+ & UT1-UTC & Estimated* & Estimated \\ \cline{2-4} 
+ & nutdx & Not Estimated & Estimated \\ \cline{2-4} 
+ & nutdy & Not Estimated & Estimated \\ \hline
+\textbf{Station Coordinates} &  & Not Estimated & Estimated \\ \hline
+\textbf{Source Coordinates} &  & Not Estimated & Estimated \\ \hline
+\end{tabular}
+\end{table}
 
+\section{RESULTS}
+\begin{table}[]
+\centering
+\caption{Overview of UT1 estimates from legacy networks, \textit{where Est is the RMS value of estimates and Err is the mean error of the estimates}. }
+\label{tab:rmsdut1}
+\begin{tabular}{lllll}
+\hline
+Resolution & \multicolumn{2}{l}{1 day} & \multicolumn{2}{l}{1 hour} \\ \Xhline{1pt}
+Network & Est & Err & Est & Err \\ \hline
+Legacy-1 & 24.63 & 2.97 & 23.94 & 7.67 \\
+Legacy-2 & 30.34 & 1.62 & 28.54 & 4.48 \\
+\begin{tabular}[c]{@{}l@{}}Legacy-1 +\\ Legacy-2\end{tabular} & 27.16 & 1.47 & 25.06 & 3.76 \\ \hline
+\end{tabular}
+\end{table}
 %\begin{acknowledgements}
 %If you'd like to thank anyone, place your comments here
 %and remove the percent signs.
