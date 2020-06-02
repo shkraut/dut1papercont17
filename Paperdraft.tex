@@ -95,7 +95,7 @@
 \maketitle
 
 \begin{abstract}
-This work deals with validating the established approach of analyzing VLBI intensive sessions to determine dUT1. VLBI sessions from the CONT17 campaign are chosen as they provide continuous VLBI observations over two weeks (28th Nov - 12th Dec 2017) of the currently highest quality. For the standard 24-hour sessions in this campaign, two different legacy networks were involved, the legacy-1 network, which was entirely based on IVS network stations with global distribution, and legacy-2 network involving VLBA and a few IVS network stations for the global extension. In addition to these 24-hour sessions, two different IVS and one Russian intensive sessions were observed every day during CONT17. The dUT1 determined from the intensive sessions are compared with daily and hourly dUT1 from 24-hour sessions during this 15-day time-frame. The results show that the dUT1 determined from intensive sessions do not show good agreement with daily dUT1 from 24-hour sessions; however, it shows better agreement with hourly
+This work deals with validating the established approach of analyzing VLBI intensive sessions to determine dUT1. VLBI sessions from the CONT17 campaign are chosen as they provide continuous VLBI observations over two weeks (28th Nov - 12th Dec 2017) of the currently highest quality. For the standard 24-hour sessions in this campaign, two different legacy networks were involved, the IVS network, which was entirely based on IVS network stations with global distribution, and VLBA network involving VLBA and a few IVS network stations for the global extension. In addition to these 24-hour sessions, two different IVS and one Russian intensive sessions were observed every day during CONT17. The dUT1 determined from the intensive sessions are compared with daily and hourly dUT1 from 24-hour sessions during this 15-day time-frame. The results show that the dUT1 determined from intensive sessions do not show good agreement with daily dUT1 from 24-hour sessions; however, it shows better agreement with hourly
 dUT1.
 \keywords{UT1 \and VLBI \and CONT17}
 % \PACS{PACS code1 \and PACS code2 \and more}
@@ -140,9 +140,8 @@ The CONT17 campaign officially started on 28th November 2017 at 00:00:00 UT, and
 \end{figure}
 
 
-\section{METHODOLOGY}
-The dUT1 from CONT17 data was estimated with VieVs@GFZ(\citep{nilsson2015application}. For our analysis, the models and the apriori used are shown in the table~\ref{tab:models}. At first, the dUT1 estimated from legacy-1, legacy-2, and combined legacy networks were compared. The dUT1 was estimated for one day and 1-hour temporal resolutions. Here the standard parameterization for a 24-hour session was used (see table~\ref{tab:param}. \\
-Secondly, dUT1 from intensives is estimated, where the standard parameterization for Intensives was followed (see table~\ref{tab:param}). These estimated dUT1 values are compared with dUT1 values estimated from the legacy networks.
+\section{DATA ANALYSIS}
+The dUT1 from CONT17 data was estimated with VieVs@GFZ(\citep{nilsson2015application}. For our analysis, the models and the apriori used are shown in the table~\ref{tab:models}. At first, the dUT1 estimated from IVS, VLBA, and combined legacy networks were compared. The dUT1 was estimated for one day and 1-hour temporal resolutions. Here the standard parameterization for a 24-hour session was used (see table~\ref{tab:param}). Secondly, dUT1 from intensives is estimated, where the standard parameterization for Intensives was followed (see table~\ref{tab:param}). These estimated dUT1 values are compared with dUT1 values estimated from the legacy networks.
 \begin{table}[]
 \centering
 \caption{A priori and correction models used for different parameters}
@@ -189,24 +188,17 @@ Secondly, dUT1 from intensives is estimated, where the standard parameterization
 \end{table}
 
 \section{RESULTS}
-The dUT1 time-series was estimated from 24-hour sessions of legacy-1, legacy-2, and combined network (legacy-1 + legacy-2) using global solutions in VieVs@GFZ software. The model/apriori data, and parameterization were used as given in table~\ref{tab:models} and~\ref{tab:param}, respectively. The dUT1 were estimated for one day and one-hour resolution. \\
-As we can see from the figure~\ref{fig:dut1} that dUT1 estimated from the combined network has approximately average values of dUT1 estimated from individual legacy networks, for both resolutions. The dUT1 from combined networks also has smaller formal errors and fewer outliers. This can be explained as the combined network has significantly more observations and participating stations. The hourly dUT1 contains sub-daily variations which can be seen in the bottom figure~\ref{fig:dut1}. To understand the relationship between dUT1 estimated from legacy-1 and legacy-2 network, we computed the correlation between them. For one day resolution, the correlation was found to be 0.93 and for one-hour resolution, it is 0.61. The decrease in correlation coefficient for hourly resolution might be due to different sub-daily variations in the legacy networks. 
+\subsection{dUT1 from 24-hour sessions}
+The dUT1 time-series was estimated from 24-hour sessions of IVS, VLBA, and combined network (IVS + VLBA) using global solutions in VieVs@GFZ software. The model/apriori data, and parameterization were used as given in table~\ref{tab:models} and~\ref{tab:param}, respectively. The dUT1 were estimated for one day and one-hour resolution. \\
+As we can see from the figure~\ref{fig:dut1} that dUT1 estimated from the combined network has approximately average values of dUT1 estimated from individual legacy networks, for both resolutions. The dUT1 from combined networks also has smaller formal errors and fewer outliers. This can be explained as the combined network has significantly more observations and participating stations. The hourly dUT1 contains sub-daily variations which can be seen in the bottom figure~\ref{fig:dut1}. To understand the relationship between dUT1 estimated from IVS and VLBA network, we computed the correlation between them. For one day resolution, the correlation was found to be 0.93 and for one-hour resolution, it is 0.61. The decrease in correlation coefficient for hourly resolution might be due to different sub-daily variations in the legacy networks. 
 To summarize, dUT1 estimated from combined and individual legacy networks are consistent with each other. \\
-Now we will compare dUT1 values from intensive sessions with dUT1 estimated from legacy networks. 
-% As the parameterization used for determining dUT1 from intensive sessions included many parameters not being estimated might.  
-The daily dUT1 values from the 3 intensive networks are over-plotted with dUT1 from legacy-1 and legacy-2 networks at 00:00:00 UTC epoch. As the IVS-INT1 and IVS-INT2 have the same baselines with different observing time and observed sources, they are grouped for this dUT1 over-plot, and dUT1 from Russian intensives are plotted separately for our analysis. \\
-It can be observed from the figure~\ref{fig:dut1int}, that the dUT1 values from intensives do not show a good agreement with daily dUT1 values from legacy networks. To further validate the relationship between them, the correlation coefficient is computed. The coefficient between IVS intensives and Legacy networks is near to zero and hence no correlation was found between them. This could be due to different observing times of IVS-INT1 (evening) and IVS-INT2 (morning), it might have resulted in inconsistent dUT1 values. However, the correlation coefficient between Russian intensives and Legacy-1, and Legacy-2 are 0.62 and 0.68 respectively, which considerably shows better agreement between them. The possible reason can be explained as most parameters are not estimated, i.e., fixed to a priori values when estimating dUT1 from intensives. The inaccuracies present in the a priori values of the fixed parameters, it will further propagate in the dUT1 determination. \\
-In addition to the reason mentioned above, the inconsistencies between the dUT1 values could be present due to the different observing times. The estimated daily values of dUT1 from intensive sessions are computed from observations that span approximately one hour during a day, the sub-daily variations in dUT1 might be present in it. The sub-daily variations in daily dUT1 from legacy networks are not present as these variations are averaged out in such 24-hour sessions. This might be another possible reason for the inconsistencies present between the dUT1 estimated from intensives and legacy networks. To improve the agreement between them, we can compare the dUT1 values for the same interval. \\ 
-This comparison can be done with two approaches. The first approach is to estimate the dUT1 from 24-hour sessions for an hourly interval. Then we can compare dUT1 from the intensive session with the hourly dUT1 estimated from legacy networks for the corresponding interval when the intensive session took place. The other approach is to compute the dUT1 value from the intensive session and then extrapolate this value to the closest midnight epoch (i.e., 00:00:00 UTC) using high-frequency EOP models. This dUT1 value can be compared to the daily dUT1 value estimated from the legacy networks. \\
-
-\begin{figure}
+\begin{figure}[h]
     \centering
     \includegraphics[scale=0.3]{dut1.eps}
-    \caption{dUT1 estimates for 1 day (top) and 1-hour (below) resolution; The blue, red and green line represents dUT1 estimated from Legacy-1, Legacy-2 and combined network, respectively.}
+    \caption{dUT1 estimates for 1 day (top) and 1-hour (below) resolution; The blue, red and green line represents dUT1 estimated from IVS, VLBA and combined network, respectively.}
     \label{fig:dut1}
 \end{figure}
-
-\begin{table}[]
+\begin{table}[h]
 \centering
 \caption{The root mean square (RMS) values of the dUT1 estimates from 3 networks and their corresponding mean errors. 
 (All values are in $\mu secs$)}
@@ -215,25 +207,45 @@ This comparison can be done with two approaches. The first approach is to estima
 \hline
 Networks & \multicolumn{2}{c}{1 day} & \multicolumn{2}{c}{1 hour} \\ \hline
 (in $\mu secs$) & \begin{tabular}[c]{@{}c@{}}RMS of\\ Estimates\end{tabular} & \begin{tabular}[c]{@{}c@{}}Mean\\ Error\end{tabular} & \begin{tabular}[c]{@{}c@{}}RMS of\\ Estimates\end{tabular} & \begin{tabular}[c]{@{}c@{}}Mean\\ Error\end{tabular} \\ \Xhline{1.2}
-Legacy-1 & 24.70 & 2.97 & 23.94 & 7.63 \\
-Legacy-2 & 30.34 & 1.62 & 28.54 & 4.48 \\
+IVS & 24.70 & 2.97 & 23.94 & 7.63 \\
+VLBA & 30.34 & 1.62 & 28.54 & 4.48 \\
 Combined & 27.17 & 1.47 & 25.06 & 3.76 \\ \hline
 \end{tabular}
 \end{table}
 
-\begin{figure}
+\subsection{dUT1 from Intensive sessions}
+Now we will compare dUT1 values from intensive sessions with dUT1 estimated from legacy networks. The daily dUT1 values from the 3 intensive networks are over-plotted with dUT1 from IVS and VLBA networks at 00:00:00 UTC epoch. As the IVS-INT1 and IVS-INT2 have the same baselines with different observing time and observed sources, they are grouped for this dUT1 over-plot, and dUT1 from Russian intensives are plotted separately for our analysis. \\
+It can be observed from the figure~\ref{fig:dut1int}, that the dUT1 values from intensives do not show a good agreement with daily dUT1 values from legacy networks. To further validate the relationship between them, the correlation coefficient is computed. The coefficient between IVS intensives and Legacy networks is near to zero and hence no correlation was found between them. This could be due to different observing times of IVS-INT1 (evening) and IVS-INT2 (morning), it might have resulted in inconsistent dUT1 values. However, the correlation coefficient between Russian intensives and IVS, and VLBA are 0.62 and 0.68 respectively, which considerably shows better agreement between them. The possible reason can be explained as most parameters are not estimated, i.e., fixed to a priori values when estimating dUT1 from intensives. The inaccuracies present in the a priori values of the fixed parameters, it will further propagate in the dUT1 determination. In addition to the reason mentioned above, the inconsistencies between the dUT1 values could be present due to the different observing times. The estimated daily values of dUT1 from intensive sessions are computed from observations that span approximately one hour during a day, the sub-daily variations in dUT1 might be present in it. The sub-daily variations in daily dUT1 from legacy networks are not present as these variations are averaged out in such 24-hour sessions. This might be another possible reason for the inconsistencies present between the dUT1 estimated from intensives and legacy networks. To improve the agreement between them, we can compare the dUT1 values for the same interval. \\
+\begin{figure}[h]
     \centering
     \includegraphics[scale=.28]{dut11day.eps}
-    \caption{Comparison of daily dUT1 estimates from Legacy networks with IVS intensives (top) and Russian intensives (bottom). \textit{Blue and Red lines represents Legacy-1 and Legacy-2 networks respectively; Magenta, cyan, and black represents dUT1 from IVS-INT1, IVS-INT2, and Russian intensives respectively}.}
+    \caption{Comparison of daily dUT1 estimates from Legacy networks with IVS intensives (top) and Russian intensives (bottom). \textit{Blue and Red lines represents IVS and VLBA networks respectively; Magenta, cyan, and black represents dUT1 from IVS-INT1, IVS-INT2, and Russian intensives respectively}.}
     \label{fig:dut1int}
 \end{figure}
-
-\begin{figure}
+This comparison can be done with two approaches. The first approach is to estimate the dUT1 from 24-hour sessions for an hourly resolution. Then we can compare dUT1 from the intensive session with the hourly dUT1 estimated from legacy networks for the corresponding interval when the intensive session took place. The other approach is to compute the dUT1 value from the intensive session and then extrapolate this value to the nearest midnight epoch (i.e., 00:00:00 UTC) using high-frequency EOP models. This dUT1 value can be compared to the daily dUT1 value estimated from the legacy networks. \\
+In the first approach, we compare the dUT1 of the mean epoch of the intensive session. For example, if the intensive session spans from 18:30 to 19:30, we compare with dUT1 value at the 19:00 epoch. The figure~\ref{fig:dut1int1hr} displays this comparison. It is difficult to infer strongly from the figure~\ref{fig:dut1int1hr}, whether dUT1 shows better agreement with hourly dUT1 than daily dUT1 from legacy networks. To understand better, we computed the root mean square value of the difference in dUT1 estimates from intensive and legacy networks. As we can see from the figures~\ref{fig:rmsdut1xb} and~\ref{fig:rmsdut1xa}, we can infer that dUT1 from IVS-INT1 network shows slightly better agreement with the hourly dUT1 from the legacy networks. On the contrary, dUT1 from IVS-INT2 and Russian network do not show any improvement. The reason for this is not clear at the moment.
+\begin{figure}[h]
     \centering
     \includegraphics[scale=.28]{dut1hr.eps}
-    \caption{Comparison of houry dUT1 estimates from Legacy networks with IVS intensives (top) and Russian intensives (bottom). \textit{Blue and Red lines represents Legacy-1 and Legacy-2 networks respectively; Magenta, cyan, and black represents dUT1 from IVS-INT1, IVS-INT2, and Russian intensives respectively}.}
+    \caption{Comparison of hourly dUT1 estimates from Legacy networks with IVS intensives (top) and Russian intensives (bottom). \textit{Blue and Red lines represents IVS and VLBA networks respectively; Magenta, cyan, and black represents dUT1 from IVS-INT1, IVS-INT2, and Russian intensives respectively}.}
     \label{fig:dut1int1hr}
 \end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.25]{rmsdut1xb.eps}
+    \caption{The root mean square value of the difference between dUT1 estimated from IVS network and intensive networks; Blue and red coloured bar represents difference in dUT1 for daily and hourly resolution, respectively.}
+    \label{fig:rmsdut1xb}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.25]{rmsdut1xa.eps}
+    \caption{The root mean square value of the difference between dUT1 estimated from VLBA network and intensive networks; Blue and red coloured bar represents difference in dUT1 for daily and hourly resolution, respectively.}
+    \label{fig:rmsdut1xa}
+\end{figure}
+
+\section{CONCLUSIONS}
 %\begin{acknowledgements}
 %If you'd like to thank anyone, place your comments here
 %and remove the percent signs.
